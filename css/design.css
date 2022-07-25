@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,200&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Desing of the Table displaying data */
+
+html, body{
+    font-family: 'Barlow', sans-serif;
+    background-color: #17222d;
+    color: #ffffff;
+    width: 100%;
+    height: 40%;
+}
+
+.container2{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: #222f3e;
+    border-radius: 6px;
+}
+
+table{
+    min-width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table th{
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 8px 12px;
+    position: relative;
+    border-bottom: 1px solid #576574;
+    user-select: none;
+    cursor: pointer;
+    transition: all linear 0.16s;
+}
+
+table th{
+    padding: 8px 26px 8px 12px;
+}
+
+table td{
+    font-size: 14px;
+    border-bottom: 1px solid #576574;
+    padding: 6px 12px;
+}
+
+table th:hover{
+    background-color: #0008;
+    cursor: pointer;
+}
+
+table th[sort-item]:before, 
+table th[sort-item]:after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 0;
+    opacity: 0.3;
+    border: 4px solid transparent;
+}
+
+table th[sort-item]:before{
+    top: 5px;
+    border-bottom-color: #ff6b6b;
+}
+
+table th[sort-item]:after{
+    top: 16px;
+    border-top-color: #ff6b6b;
+}
+
+table th.asc:before,
+table th.desc:after{
+    opacity: 1;
+}
+
+table th.asc,
+table th.desc{
+    color: #ff6b6b;
+}
+
+/* table th::after{
+    content: '\25b4';
+    position: absolute;
+    right: 10px;
+    font-size: inherit;
+    top: 50%;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+table th.asc{
+    background-color: #0008;
+}
+
+table th.asc::after{
+    transform: rotate(0deg)
+} */
+
+/* Desing of the Button */
+
+.container1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container{
+    border: 1.2px solid grey;
+    border-radius: 10px;
+    padding: 0.6px;
+}
+
+.border_container{
+    border: 3px solid rgb(202, 202, 202);
+    border-radius: 9px;
+}
+
+button{
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+    font-weight: 800;
+    color: rgb(88, 88, 88);
+    background: transparent linear-gradient(180deg, #e5e5e5 0%, #a4a4a4 100%) 0% 0% no-repeat padding-box;
+}
