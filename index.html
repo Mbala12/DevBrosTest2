@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/fetchdata.js"></script>
+    <title>DevBros Web Dev Assessment</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="button_container">
+            <div class="border_container">
+                <button>checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <table class="bikeTable">
+            <thead>
+                <tr>
+                    <th>BikeID</th>
+                    <th sort-item onclick="sortTable(1, this)">Make</th>
+                    <th sort-item onclick="sortTable(2, this)">Model</th>
+                    <th sort-item onclick="sortTable(3, this)">Year</th>
+                    <th sort-item onclick="sortTable(4, this)">Displacement</th>
+                    <th sort-item onclick="sortTable(5, this)">Price</th>
+                    <th sort-item onclick="sortTable(6, this)">Terrain</th>
+                    <th sort-item onclick="sortTable(7, this)">Description</th>
+                </tr>
+            </thead>
+            <tbody id="bikedata">
+              
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
