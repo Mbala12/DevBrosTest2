@@ -17,18 +17,23 @@
         </div>
     </div>
 
+    <div class="container3">
+        <input type="text" onkeyup="FilterAll()" placeholder="Search..." class="filter-info" id="search">
+        <!-- <div class="output"></div> -->
+    </div>
+
     <div class="container2">
-        <table class="bikeTable">
+        <table id="bikeTable">
             <thead>
                 <tr>
-                    <th>BikeID</th>
-                    <th sort-item onclick="sortTable(1, this)">Make</th>
-                    <th sort-item onclick="sortTable(2, this)">Model</th>
-                    <th sort-item onclick="sortTable(3, this)">Year</th>
-                    <th sort-item onclick="sortTable(4, this)">Displacement</th>
-                    <th sort-item onclick="sortTable(5, this)">Price</th>
-                    <th sort-item onclick="sortTable(6, this)">Terrain</th>
-                    <th sort-item onclick="sortTable(7, this)">Description</th>
+                    <th sort-item onclick="sortNumeric(0, this)">BikeID</th>
+                    <th sort-item onclick="sortASCII(1, this)">Make</th>
+                    <th sort-item onclick="sortASCII(2, this)">Model</th>
+                    <th sort-item onclick="sortNumeric(3, this)">Year</th>
+                    <th sort-item onclick="sortNumeric(4, this)">Displacement</th>
+                    <th sort-item onclick="sortNumeric(5, this)">Price</th>
+                    <th sort-item onclick="sortASCII(6, this)">Terrain</th>
+                    <th sort-item onclick="sortASCII(7, this)">Description</th>
                 </tr>
             </thead>
             <tbody id="bikedata">
@@ -38,4 +43,5 @@
     </div>
     
 </body>
+
 </html>
